@@ -60,7 +60,7 @@ def nvidiaCNN(input_shape):
     from keras.layers import Lambda, Cropping2D, Convolution2D, Flatten, Dense
     model = Sequential()
     model.add(Lambda(lambda x: (x / 255.0) - 0.5, input_shape=input_shape))
-    model.add(Cropping2D(cropping=((70, 25), (0, 0))))
+    model.add(Cropping2D(cropping=((60, 25), (0, 0))))
     model.add(Convolution2D(24, 5, 5, subsample=(2, 2), activation='relu'))
     model.add(Convolution2D(36, 5, 5, subsample=(2, 2), activation='relu'))
     model.add(Convolution2D(48, 5, 5, subsample=(2, 2), activation='relu'))
