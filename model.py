@@ -48,7 +48,7 @@ def generator(samples, batch_size=32):
 
                 # Flip the image horizontally
                 images.append(cv2.flip(image, 1))
-                steerings.append(-1.0*float(measurement))
+                steerings.append(-1.0 * float(measurement))
 
             # trim image to only see section with road
             X = np.array(images)
@@ -84,7 +84,7 @@ def main():
     '''
 
     ## Set environment parameters
-    data_path = '../recording'
+    data_path = '../data'
     raw_image_shape = (160, 320, 3)
     batch_size = 32
 
