@@ -80,7 +80,7 @@ def main():
     '''
 
     ## Set environment parameters
-    data_path = './recording'
+    data_path = '../recording'
     raw_image_shape = (160, 320, 3)
     batch_size = 32
 
