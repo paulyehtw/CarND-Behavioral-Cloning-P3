@@ -46,6 +46,10 @@ def generator(samples, batch_size=32):
                 images.append(image)
                 steerings.append(float(measurement))
 
+                # Flip the image horizontally
+                images.append(cv2.flip(image, 1))
+                steerings.append(-1.0*float(measurement))
+
             # trim image to only see section with road
             X = np.array(images)
             y = np.array(steerings)
